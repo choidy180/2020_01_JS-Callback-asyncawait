@@ -1,0 +1,41 @@
+function asyncFunction1(cb) {
+  setTimeout(function() {
+    console.log(1)
+    cb()
+  }, 100)
+}
+
+// 중략
+
+function asyncFunction9(cb) {
+  setTimeout(function() {
+    console.log(9)
+    cb()
+  }, 100)
+}
+
+function asyncFunction10(cb) {
+  setTimeout(function() {
+    console.log(10)
+  }, 100)
+}
+
+asyncFunction1(function(result) {
+  asyncFunction2(function(result) {
+    asyncFunction3(function(result) {
+      asyncFunction4(function(result) {
+        asyncFunction5(function(result) {
+          asyncFunction6(function(result) {
+            asyncFunction7(function(result) {
+              asyncFunction8(function(result) {
+                asyncFunction9(function(result) {
+                  asyncFunction10()
+                })
+              })
+            })
+          })
+        })
+      })
+    })
+  })
+})
