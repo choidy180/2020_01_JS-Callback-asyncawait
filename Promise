@@ -1,0 +1,27 @@
+function async1() {
+  return new Promise(function(resolve) {
+    setTimeout(function() {
+      console.log(1)
+      resolve()
+    }, 300)
+  })
+}
+function async2() {
+  return new Promise(function(resolve) {
+    setTimeout(function() {
+      console.log(2)
+      resolve()
+    }, 100)
+  })
+}
+function async3() {
+  return new Promise(function(resolve) {
+    setTimeout(function() {
+      console.log(3)
+      resolve()
+    }, 300)
+  })
+}
+async1();
+async2();
+async3();
